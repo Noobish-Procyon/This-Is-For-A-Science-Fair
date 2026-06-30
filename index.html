@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SmartSafety Helmet – Parent Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>SmartSafety Helmet – Parent Dashboard</h1>
+  <p>Live status of your child’s helmet. If the helmet is off while moving, you’ll see a red alert.</p>
+
+  <div id="statusBox" class="status safe">
+    <div class="label">Current status</div>
+    <div id="statusText" class="value">Loading...</div>
+    <p id="detailsText"></p>
+  </div>
+
+  <h3>Alerts</h3>
+  <ul id="alertsList"></ul>
+
+  <h3>Simulate helmet data (for testing)</h3>
+  <div class="simulate-btns">
+    <button onclick="updateHelmetData(true, false)">Helmet ON, no motion</button>
+    <button onclick="updateHelmetData(true, true)">Helmet ON, motion</button>
+    <button onclick="updateHelmetData(false, false)">Helmet OFF, no motion</button>
+    <button onclick="updateHelmetData(false, true)">Helmet OFF, motion (ALERT)</button>
+  </div>
+
+  <div class="footer">
+    SmartSafety prototype – replace simulation with real data from your helmet (ESP32, Firebase, etc.).
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
