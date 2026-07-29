@@ -2,26 +2,23 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Parent Login</h1>
+  <button onclick="logout()">Logout</button>
 
-  <div class="login-box">
-    <input id="email" type="email" placeholder="Email">
-    <input id="password" type="password" placeholder="Password">
+  <h1>SmartSafety Helmet – Parent Dashboard</h1>
 
-    <label>
-      <input type="checkbox" id="rememberMe"> Remember me
-    </label>
-
-    <button onclick="login()">Login</button>
-    <button onclick="signup()">Create Account</button>
-
-    <p id="loginMessage"></p>
+  <div id="statusBox" class="status safe">
+    <div class="label">Current status</div>
+    <div id="statusText" class="value">Loading...</div>
+    <p id="detailsText"></p>
   </div>
+
+  <h3>Alerts</h3>
+  <ul id="alertsList"></ul>
 
   <script src="app.js"></script>
 </body>
