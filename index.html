@@ -2,19 +2,26 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard</title>
+  <title>SmartSafety Helmet Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <button onclick="logout()">Logout</button>
 
-  <h1>SmartSafety Helmet – Parent Dashboard</h1>
+  <h1>SmartSafety Helmet – Dashboard</h1>
 
   <div id="statusBox" class="status safe">
     <div class="label">Current status</div>
-    <div id="statusText" class="value">Loading...</div>
+    <div id="statusText" class="value">Waiting for data...</div>
     <p id="detailsText"></p>
+  </div>
+
+  <h3>Simulate Helmet Data</h3>
+
+  <div class="controls">
+    <button onclick="simulateHelmetSafe()">Helmet Worn + No Motion</button>
+    <button onclick="simulateHelmetWarning()">Helmet NOT Worn</button>
+    <button onclick="simulateHelmetDanger()">Helmet NOT Worn + Motion</button>
   </div>
 
   <h3>Alerts</h3>
