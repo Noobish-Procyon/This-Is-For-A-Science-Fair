@@ -52,6 +52,15 @@ h1 {
 .warning { background: #f1c40f; }
 .danger { background: #e74c3c; }
 
+/* NEW description box */
+.description {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 .controls button {
   margin-right: 10px;
   padding: 10px 14px;
