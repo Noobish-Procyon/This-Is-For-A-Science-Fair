@@ -11,20 +11,26 @@
 
   <h1>SmartSafety Helmet – Parent Dashboard</h1>
 
+  <!-- Main colored status box -->
   <div id="statusBox" class="status safe">
     <div class="label">Current status</div>
     <div id="statusText" class="value">Waiting for data...</div>
-    <p id="detailsText"></p>
   </div>
 
-  <h3>Simulate Helmet Data</h3>
+  <!-- Description box directly below -->
+  <div id="descriptionBox" class="description">
+    <p id="detailsText">Helmet worn: false | Motion: false | Last update: none</p>
+  </div>
 
+  <!-- Simulation buttons below description -->
+  <h3>Simulate Helmet Data</h3>
   <div class="controls">
     <button onclick="simulateHelmetSafe()">Helmet Worn + No Motion</button>
     <button onclick="simulateHelmetWarning()">Helmet NOT Worn</button>
     <button onclick="simulateHelmetDanger()">Helmet NOT Worn + Motion</button>
   </div>
 
+  <!-- Alerts below buttons -->
   <h3>Alerts</h3>
   <ul id="alertsList"></ul>
 
