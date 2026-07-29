@@ -75,7 +75,6 @@ function updateHelmetData(helmetWorn, motionDetected) {
   const statusBox = document.getElementById('statusBox');
   const statusText = document.getElementById('statusText');
   const detailsText = document.getElementById('detailsText');
-  const alertsList = document.getElementById('alertsList');
 
   const time = Date.now();
   let state = 'safe';
@@ -94,6 +93,8 @@ function updateHelmetData(helmetWorn, motionDetected) {
 
   statusBox.className = 'status ' + state;
   statusText.textContent = message;
+
+  // Update description box
   detailsText.textContent =
     `Helmet worn: ${helmetWorn} | Motion: ${motionDetected} | Last update: ${new Date(time).toLocaleString()}`;
 }
